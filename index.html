@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Karthika Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="home">
+
+    <!-- NAVBAR -->
+
     <nav class="navi">
-         <h2 id="logo">{Karthika}</h2>
+
+        <h2 id="logo">{Karthika}</h2>
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -17,25 +24,75 @@
             <li><a href="Projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-       <button id="toggle">
-        <img src="images/moon.jpg" id="im">
-    </button> 
+
+        <button id="toggle">
+            <img src="images/moon.jpg" id="im">
+        </button>
+
     </nav>
-    
+
+
+    <!-- HOME SECTION -->
+
     <section class="home-sec">
 
-    <div class="home-div"><h4 class="gree">Hi, I'm Karthika </h4>
-    <h2 class="name">KARTHIKA K.V.</h2>
-    <h1 class="dev">Web developer</h1>
-    <div id="btn-id">
-<button class="btn" onclick="window.location.href='Projects.html'">view Projects</button>
-<button class="btn" onclick="window.location.href='about.html'" >More About Me</button>
-</div>
-</div>
+        <!-- LEFT SIDE -->
 
-    <img src="images/photo.jpg" align="center" class="prof">
+        <div class="home-div">
+
+            <h4 class="gree">
+                Hello, I'm
+            </h4>
+
+            <h1 class="name">
+                KARTHIKA K.V.
+            </h1>
+
+            <h2 class="dev">
+                Web Developer & UI/UX Design
+            </h2>
+
+            <p class="home-para">
+
+                MSc Computer Science student passionate
+                about Web Development, Python,
+                Flask, AI Applications and UI Design.
+
+            </p>
+
+            <div id="btn-id">
+
+                <button class="btn"
+                onclick="window.location.href='Projects.html'">
+
+                    View Projects
+
+                </button>
+
+                <button class="btn btn2"
+                onclick="window.location.href='contact.html'">
+
+                    Contact Me
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="image-box">
+
+            <img src="images/photo.jpg"
+            class="prof">
+
+        </div>
+
     </section>
-    <script src="script.js"></script>
-    </section>
+
+<script src="script.js"></script>
+
 </body>
 </html>

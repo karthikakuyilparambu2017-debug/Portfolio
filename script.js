@@ -1,27 +1,48 @@
-const toggleBtn =
-document.getElementById("toggle") ||
-document.getElementById("toggl") || document.getElementById("togg") || document.getElementById("tog") ;
+// const toggleBtn =
+// document.getElementById("toggle") ||
+// document.getElementById("toggle") || document.getElementById("toggle") || document.getElementById("toggle") ;
 
 
-if(localStorage.getItem("theme") === "dark"){
+// if(localStorage.getItem("theme") === "dark"){
 
+//     document.body.classList.add("dark-mode");
+// }
+
+
+// toggleBtn.onclick = function(){
+
+//     document.body.classList.toggle("dark-mode");
+
+
+//     if(document.body.classList.contains("dark-mode")){
+
+//         localStorage.setItem("theme","dark");
+//     }
+//     else{
+
+//         localStorage.setItem("theme","light");
+//     }
+// }
+
+const toggleBtn = document.getElementById("toggle");
+
+// Apply saved theme on page load
+if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
 }
 
+// Only add click if button exists
+if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
 
-toggleBtn.onclick = function(){
+        document.body.classList.toggle("dark-mode");
 
-    document.body.classList.toggle("dark-mode");
-
-
-    if(document.body.classList.contains("dark-mode")){
-
-        localStorage.setItem("theme","dark");
-    }
-    else{
-
-        localStorage.setItem("theme","light");
-    }
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
 }
 // function sub(){
 // document.getElementById("form").addEventListener("submit",function(e){
@@ -59,64 +80,37 @@ toggleBtn.onclick = function(){
 //           }         
 // })
 // }
-document.getElementById("form")
-.addEventListener("submit", function(e){
+// 
+
+document.getElementById("form").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    let name =
-    document.getElementById("name").value;
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
 
-    let email =
-    document.getElementById("email").value;
+    let output = document.getElementById("s");
 
-    let message =
-    document.getElementById("message").value;
-
-    let output =
-    document.getElementById("s");
-
-
-    if(name==="" && email==="" && message===""){
-
-        output.innerHTML =
-        "Enter your name, email and message";
-
-        output.style.color="red";
+    if(!name && !email && !message){
+        output.innerHTML = "Enter name, email and message";
+        output.style.color = "red";
     }
-
-    else if(name===""){
-
-        output.innerHTML =
-        "Enter your name";
-
-        output.style.color="red";
+    else if(!name){
+        output.innerHTML = "Enter your name";
+        output.style.color = "red";
     }
-
-    else if(email===""){
-
-        output.innerHTML =
-        "Enter your email";
-
-        output.style.color="red";
+    else if(!email){
+        output.innerHTML = "Enter your email";
+        output.style.color = "red";
     }
-
-    else if(message===""){
-
-        output.innerHTML =
-        "Enter your message";
-
-        output.style.color="red";
+    else if(!message){
+        output.innerHTML = "Enter your message";
+        output.style.color = "red";
     }
-
     else{
-
-        output.innerHTML =
-        "Successfully sent";
-
-        output.style.color="lightgreen";
-
-        document.getElementById("form").reset();
+        output.innerHTML = "Successfully sent ✔";
+        output.style.color = "lightgreen";
+        this.reset();
     }
-
 });

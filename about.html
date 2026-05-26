@@ -2,32 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
     <title>About</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <section id="about">
 
-    <div class="cl">
-        <h1 id="id">ABOUT ME</h1>
+    <!-- NAVBAR -->
 
-        <button id="toggl">
-            <img src="images/moon.jpg" id="ima">
+    <nav class="navi">
+
+        <h2 id="logo">{Karthika}</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button id="toggle">
+            <img src="images/moon.jpg" id="im">
         </button>
-    </div>
-    <div class="about-container">
+
+    </nav>
+
+
+    <!-- ABOUT SECTION -->
+
+    <div class="about-main">
+
+        <!-- LEFT SIDE IMAGE -->
+
         <div class="about-image">
-            <img src="images/photo.jpg" alt="Karthika">
+
+            <img src="images/photo.jpg"
+            alt="Karthika"
+            class="about-pic">
+
         </div>
-        <div class="about-text">
-            <p>
-                MSc Computer Science student with experience in web development,
-                Python programming, and AI-based applications.
-                Developed projects including Dance Judge AI and a Billing
-                Management System using Flask, MySQL, and JavaScript.
+
+
+        <!-- RIGHT SIDE TEXT -->
+
+        <div class="about-content">
+
+            <h4 class="about-small">
+                ABOUT ME
+            </h4>
+
+            <h1 class="about-title">
+                I'm Karthika
+            </h1>
+
+            <h2 class="about-role">
+                Web Developer
+            </h2>
+
+            <p class="about-para">
+
+                MSc Computer Science graduate passionate
+                about web development, Python programming,
+                and AI-based applications.
+
+                Developed projects including Dance Judge AI
+                and Kalarikkal Billing Management System
+                using Flask, MySQL, JavaScript,
+                HTML, and CSS.
+
             </p>
+
+            <div class="about-info">
+
+                <div class="info-box">
+                    <h3>2025</h3>
+                    <p>Graduated MSc CS</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Frontend</h3>
+                    <p>HTML CSS JavaScript</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Backend</h3>
+                    <p>Flask MySQL</p>
+                </div>
+
+            </div>
+
+            <button class="about-btn">
+                <a href="Karthika_CV.pdf"
+download
+class="about-btn">
+
+    Download CV
+
+</a>
+            </button>
+
         </div>
 
     </div>
