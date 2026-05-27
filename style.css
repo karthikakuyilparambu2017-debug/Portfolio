@@ -243,9 +243,9 @@ body{
 .image-box{
 
     flex:1;
-
     display:flex;
     justify-content:center;
+    
 }
 
 .prof{
