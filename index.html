@@ -1,98 +1,1456 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
 
-    <title>Karthika Portfolio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Karthika K.V. - Web Developer and AI Enthusiast Portfolio"
+    >
+
+    <meta
+        name="author"
+        content="Karthika K.V."
+    >
+
+    <title>Karthika K.V. | Web Developer & AI Enthusiast</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
+
 <body>
 
-    <!-- NAVBAR -->
 
-    <nav class="navi">
+<!-- =====================================================
+     HEADER / NAVBAR
+===================================================== -->
 
-        <h2 id="logo">{Karthika}</h2>
+<header class="header">
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <nav class="navbar">
+
+        <!-- LOGO -->
+
+        <a
+            href="#home"
+            class="logo"
+            aria-label="Karthika Home"
+        >
+
+            <span>&lt;</span>Karthika<span>/&gt;</span>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            id="menuBtn"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <ul
+            class="nav-links"
+            id="navMenu"
+        >
+
+            <li>
+                <a
+                    href="#home"
+                    class="active"
+                >
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
         </ul>
 
-        <button id="toggle">
-            <img src="images/moon.jpg" id="im">
+
+        <!-- DARK MODE -->
+
+        <button
+            class="theme-toggle"
+            id="toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+        >
+
+            <span id="themeIcon">
+                ☾
+            </span>
+
         </button>
 
     </nav>
 
+</header>
 
-    <!-- HOME SECTION -->
 
-    <section class="home-sec">
 
-        <!-- LEFT SIDE -->
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
 
-        <div class="home-div">
+<main>
 
-            <h4 class="gree">
-                Hello, I'm
-            </h4>
 
-            <h1 class="name">
-                KARTHIKA K.V.
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-container">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="hero-content">
+
+            <p class="hero-greeting">
+                HELLO, I'M
+            </p>
+
+
+            <h1>
+
+                Karthika
+
+                <span>
+                    K.V.
+                </span>
+
             </h1>
 
-            <h2 class="dev">
-                Web Developer & UI/UX Design
+
+            <h2>
+
+                Web Developer
+
+                <span>
+                    &
+                </span>
+
+                AI Enthusiast
+
             </h2>
 
-            <p class="home-para">
 
-                MSc Computer Science student passionate
-                about Web Development, Python,
-                Flask, AI Applications and UI Design.
+            <p class="hero-description">
+
+                MSc Computer Science graduate passionate about
+                creating modern, responsive web applications
+                and intelligent software solutions.
 
             </p>
 
-            <div id="btn-id">
 
-                <button class="btn"
-                onclick="window.location.href='Projects.html'">
+            <!-- BUTTONS -->
 
-                    View Projects
+            <div class="hero-buttons">
 
-                </button>
+                <a
+                    href="#projects"
+                    class="btn btn-primary"
+                >
 
-                <button class="btn btn2"
-                onclick="window.location.href='contact.html'">
+                    View My Work
 
-                    Contact Me
+                    <span>
+                        →
+                    </span>
 
-                </button>
+                </a>
+
+
+                <a
+                    href="Karthika K.V-CV.pdf"
+                    download
+                    class="btn btn-outline"
+                >
+
+                    Download CV
+
+                </a>
+
+            </div>
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="hero-social">
+
+                <a
+                    href="https://github.com/karthikakuyilparambu2017-debug"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <span>
+                    •
+                </span>
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <span>
+                    •
+                </span>
+
+                <a href="#contact">
+                    Contact
+                </a>
 
             </div>
 
         </div>
 
 
-        <!-- RIGHT SIDE -->
 
-        <div class="image-box">
+        <!-- RIGHT IMAGE -->
 
-            <img src="images/photo1.jpg"
-            class="prof">
+        <div class="hero-image-container">
+
+            <div class="image-decoration"></div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="images/photo1.jpg"
+                    alt="Karthika K.V."
+                >
+
+            </div>
+
+
+            
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
+
+<section
+    id="about"
+    class="section about-section"
+>
+
+    <div class="section-container">
+
+
+        <!-- HEADING -->
+
+        <div class="section-heading">
+
+            <p>
+                01 / ABOUT ME
+            </p>
+
+            <h2>
+
+                Building ideas
+
+                <span>
+                    into reality.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- ABOUT CONTENT -->
+
+        <div class="about-grid">
+
+
+            <!-- IMAGE -->
+
+            <div class="about-image">
+
+                <img
+                    src="images/photo1.jpg"
+                    alt="Karthika K.V."
+                >
+
+            </div>
+
+
+
+            <!-- TEXT -->
+
+            <div class="about-content">
+
+                <h3>
+                    I'm Karthika K.V.
+                </h3>
+
+
+                <p>
+
+                    I am an MSc Computer Science graduate
+                    with a strong interest in web development,
+                    software development and AI-based
+                    applications.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy creating clean and user-friendly
+                    interfaces and developing applications
+                    using technologies such as React,
+                    JavaScript, Python, Flask and MySQL.
+
+                </p>
+
+
+                <p>
+
+                    My projects include an AI-based dance
+                    evaluation system, a billing management
+                    system and several modern React
+                    applications.
+
+                </p>
+
+
+
+                <!-- DETAILS -->
+
+                <div class="about-details">
+
+
+                    <div>
+
+                        <span>
+                            Education
+                        </span>
+
+                        <strong>
+                            MSc Computer Science
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Focus
+                        </span>
+
+                        <strong>
+                            Web Development
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Frontend
+                        </span>
+
+                        <strong>
+                            React / JavaScript
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Backend
+                        </span>
+
+                        <strong>
+                            Python / Flask
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Database
+                        </span>
+
+                        <strong>
+                            MySQL / MongoDB
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Interest
+                        </span>
+
+                        <strong>
+                            AI & Computer Vision
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- CV BUTTON -->
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="Karthika K.V-CV.pdf"
+                        download
+                        class="btn btn-primary"
+                    >
+
+                        Download My CV
+
+                        <span>
+                            ↓
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS SECTION
+===================================================== -->
+
+<section
+    id="skills"
+    class="section skills-section"
+>
+
+    <div class="section-container">
+
+
+        <!-- HEADING -->
+
+        <div class="section-heading center">
+
+            <p>
+                02 / SKILLS
+            </p>
+
+            <h2>
+
+                Technologies I
+
+                <span>
+                    work with.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- SKILLS GRID -->
+
+        <div class="skills-grid">
+
+
+            <!-- HTML -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+                    Building semantic, accessible and
+                    well-structured web pages.
+                </p>
+
+                <span class="skill-level">
+                    Advanced
+                </span>
+
+            </article>
+
+
+
+            <!-- CSS -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    #
+                </div>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+                    Creating responsive layouts using
+                    Flexbox, Grid and modern CSS.
+                </p>
+
+                <span class="skill-level">
+                    Advanced
+                </span>
+
+            </article>
+
+
+
+            <!-- JAVASCRIPT -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    JS
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Developing interactive and dynamic
+                    frontend applications.
+                </p>
+
+                <span class="skill-level">
+                    Intermediate
+                </span>
+
+            </article>
+
+
+
+            <!-- REACT -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    R
+                </div>
+
+                <h3>
+                    React
+                </h3>
+
+                <p>
+                    Building component-based applications
+                    using Hooks and Redux Toolkit.
+                </p>
+
+                <span class="skill-level">
+                    Intermediate
+                </span>
+
+            </article>
+
+
+
+            <!-- PYTHON -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    Py
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Application development, automation
+                    and AI-based projects.
+                </p>
+
+                <span class="skill-level">
+                    Intermediate
+                </span>
+
+            </article>
+
+
+
+            <!-- FLASK -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    F
+                </div>
+
+                <h3>
+                    Flask
+                </h3>
+
+                <p>
+                    Backend development and REST API
+                    integration using Python.
+                </p>
+
+                <span class="skill-level">
+                    Intermediate
+                </span>
+
+            </article>
+
+
+
+            <!-- MYSQL -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    DB
+                </div>
+
+                <h3>
+                    MySQL
+                </h3>
+
+                <p>
+                    Database design, SQL queries and
+                    application integration.
+                </p>
+
+                <span class="skill-level">
+                    Intermediate
+                </span>
+
+            </article>
+
+
+
+            <!-- MONGODB -->
+
+            <article class="skill-card">
+
+                <div class="skill-icon">
+                    M
+                </div>
+
+                <h3>
+                    MongoDB
+                </h3>
+
+                <p>
+                    Working with NoSQL databases for
+                    modern applications.
+                </p>
+
+                <span class="skill-level">
+                    Learning
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS SECTION
+===================================================== -->
+
+<section
+    id="projects"
+    class="section projects-section"
+>
+
+    <div class="section-container">
+
+
+        <!-- HEADING -->
+
+        <div class="section-heading">
+
+            <p>
+                03 / PROJECTS
+            </p>
+
+            <h2>
+
+                Things I've
+
+                <span>
+                    built.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- PROJECT GRID -->
+
+        <div class="projects-grid">
+
+
+
+            <!-- =========================================
+                 PROJECT 1
+            ========================================== -->
+
+            <article class="project-card featured">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        PYTHON / FLASK / MYSQL
+                    </span>
+
+                    <h3>
+                        Kalarikkal Billing System
+                    </h3>
+
+                    <p>
+
+                        A complete billing and inventory
+                        management system designed to manage
+                        products, invoices and business
+                        operations.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>MySQL</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug/kalarikkal-billing-system"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        View on GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 PROJECT 2
+            ========================================== -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        AI / COMPUTER VISION
+                    </span>
+
+                    <h3>
+                        Dance Judge AI
+                    </h3>
+
+                    <p>
+
+                        An AI-based Bharatanatyam evaluation
+                        project using computer vision,
+                        MediaPipe and pose analysis techniques.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Python</span>
+                        <span>AI</span>
+                        <span>MediaPipe</span>
+                        <span>Computer Vision</span>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug/dance-judge-ai"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        View on GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 PROJECT 3
+            ========================================== -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        REACT APPLICATION
+                    </span>
+
+                    <h3>
+                        Hotel Room Booking
+                    </h3>
+
+                    <p>
+
+                        A responsive hotel booking application
+                        where users can browse rooms, view
+                        details and manage reservations.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                        <span>React Router</span>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug/Hotel-Booking-react"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        View on GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 PROJECT 4
+            ========================================== -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    04
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        REACT APPLICATION
+                    </span>
+
+                    <h3>
+                        Train Ticket Booking
+                    </h3>
+
+                    <p>
+
+                        A train reservation interface for
+                        searching trains, checking schedules,
+                        selecting seats and booking tickets.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug/train-reservation-system"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        View on GitHub →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 PROJECT 5
+            ========================================== -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    05
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        REACT / REDUX TOOLKIT
+                    </span>
+
+                    <h3>
+                        Shopping Cart
+                    </h3>
+
+                    <p>
+
+                        E-commerce shopping cart application
+                        built using React and Redux Toolkit
+                        for global state management.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>React</span>
+                        <span>Redux Toolkit</span>
+                        <span>Axios</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        View Projects →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 PROJECT 6
+            ========================================== -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    06
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        REACT / REDUX TOOLKIT / API
+                    </span>
+
+                    <h3>
+                        FlavorFind
+                    </h3>
+
+                    <p>
+
+                        A responsive recipe discovery
+                        application using React, Redux Toolkit
+                        and REST API integration.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>React</span>
+                        <span>Redux Toolkit</span>
+                        <span>Bootstrap</span>
+                        <span>REST API</span>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                    >
+
+                        View Projects →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 PROJECT 7 - GAME APP
+            ========================================== -->
+
+            <article class="project-card featured">
+
+                <div class="project-number">
+                    07
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        REACT / REDUX TOOLKIT / API
+                    </span>
+
+                    <h3>
+                        Game Explorer
+                    </h3>
+
+                    <p>
+
+                        A responsive game discovery application
+                        built with React and Redux Toolkit.
+                        Users can explore games, search games
+                        and view game information through API
+                        integration.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>React</span>
+                        <span>Redux Toolkit</span>
+                        <span>REST API</span>
+                        <span>JavaScript</span>
+                        <span>Responsive UI</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="https://preeminent-sfogliatella-533990.netlify.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+
+                            Live Demo →
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/karthikakuyilparambu2017-debug"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+
+                            GitHub →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+
+<section
+    id="contact"
+    class="section contact-section"
+>
+
+    <div class="section-container">
+
+        <div class="contact-grid">
+
+
+            <!-- CONTACT INTRO -->
+
+            <div class="contact-intro">
+
+                <p class="section-label">
+                    04 / CONTACT
+                </p>
+
+
+                <h2>
+
+                    Let's build
+
+                    <span>
+                        something great.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Have a project, job opportunity or
+                    collaboration idea?
+
+                    Feel free to get in touch with me.
+
+                </p>
+
+
+                <a
+                    href="mailto:karthikakuyilparambu2017@gmail.com"
+                    class="email-link"
+                >
+
+                    karthikakuyilparambu2017@gmail.com
+
+                </a>
+
+
+                <div class="hero-social">
+
+                    <a
+                        href="https://github.com/karthikakuyilparambu2017-debug"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+
+                    <span>
+                        •
+                    </span>
+
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+
+                    Send Message
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <!-- FOOTER BRAND -->
+
+        <div>
+
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                <span>&lt;</span>
+                Karthika
+                <span>/&gt;</span>
+
+            </a>
+
+
+            <p>
+                Web Developer & AI Enthusiast
+            </p>
+
+        </div>
+
+
+
+        <!-- FOOTER LINKS -->
+
+        <div class="footer-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Karthika K.V.
+        </span>
+
+        <span>
+            Designed & Developed with HTML, CSS & JavaScript
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,116 +1,209 @@
-// const toggleBtn =
-// document.getElementById("toggle") ||
-// document.getElementById("toggle") || document.getElementById("toggle") || document.getElementById("toggle") ;
+/* =========================================================
+   KARTHIKA PORTFOLIO JAVASCRIPT
+========================================================= */
 
 
-// if(localStorage.getItem("theme") === "dark"){
-
-//     document.body.classList.add("dark-mode");
-// }
-
-
-// toggleBtn.onclick = function(){
-
-//     document.body.classList.toggle("dark-mode");
-
-
-//     if(document.body.classList.contains("dark-mode")){
-
-//         localStorage.setItem("theme","dark");
-//     }
-//     else{
-
-//         localStorage.setItem("theme","light");
-//     }
-// }
+/* =========================================================
+   DARK / LIGHT MODE
+========================================================= */
 
 const toggleBtn = document.getElementById("toggle");
 
-// Apply saved theme on page load
-if (localStorage.getItem("theme") === "dark") {
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
 }
 
-// Only add click if button exists
+
+// Theme toggle
 if (toggleBtn) {
+
     toggleBtn.addEventListener("click", function () {
 
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
+
             localStorage.setItem("theme", "dark");
+
         } else {
+
             localStorage.setItem("theme", "light");
+
         }
+
     });
+
 }
-// function sub(){
-// document.getElementById("form").addEventListener("submit",function(e){
-//     e.preventDefault();
 
-//     let name=document.getElementById("name").value;
-//     let email=document.getElementById("email").value;
-//     let message=document.getElementById("message").value;
-//     if(name==="" && email==="" && message===""){
-//              document.getElementById("s").innerHTML="enter your name,email and message";
-//           }
-//             else if(name==="" && email===""){
-//             document.getElementById("s").innerHTML="enter your name and email "; 
-//           }
-//           else if(email==="" && message===""){
-//             document.getElementById("s").innerHTML="enter your email and a message"; 
-//           }
-//           else if(message==="" && name===""){
-//             document.getElementById("s").innerHTML="enter your name and a message";
-//           }
-//             else if(name===""){
-//             document.getElementById("s").innerHTML="enter your name"; 
-//           }
-//            else if(email===""){
-//             document.getElementById("s").innerHTML="enter your email"; 
-//           }
-//           else if(message===""){
-//             document.getElementById("s").innerHTML="enter a message"; 
-//           }
-          
-          
-//           else{
-//              document.getElementById("s").innerHTML="Successfully send";
-//               document.getElementById("form").reset();
-//           }         
-// })
-// }
-// 
 
-document.getElementById("form").addEventListener("submit", function(e){
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
 
-    e.preventDefault();
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
+if (menuBtn && navMenu) {
 
-    let output = document.getElementById("s");
+    menuBtn.addEventListener("click", function () {
 
-    if(!name && !email && !message){
-        output.innerHTML = "Enter name, email and message";
-        output.style.color = "red";
-    }
-    else if(!name){
-        output.innerHTML = "Enter your name";
-        output.style.color = "red";
-    }
-    else if(!email){
-        output.innerHTML = "Enter your email";
-        output.style.color = "red";
-    }
-    else if(!message){
-        output.innerHTML = "Enter your message";
-        output.style.color = "red";
-    }
-    else{
-        output.innerHTML = "Successfully sent ✔";
-        output.style.color = "lightgreen";
-        this.reset();
-    }
-});
+        navMenu.classList.toggle("active");
+
+        if (navMenu.classList.contains("active")) {
+
+            menuBtn.innerHTML = "✕";
+            menuBtn.setAttribute(
+                "aria-label",
+                "Close navigation"
+            );
+
+        } else {
+
+            menuBtn.innerHTML = "☰";
+            menuBtn.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
+
+        }
+
+    });
+
+
+    // Close menu after clicking a link
+
+    const navLinks = navMenu.querySelectorAll("a");
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navMenu.classList.remove("active");
+
+            menuBtn.innerHTML = "☰";
+
+        });
+
+    });
+
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const form = document.getElementById("form");
+
+if (form) {
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name =
+            document
+                .getElementById("name")
+                .value
+                .trim();
+
+        const email =
+            document
+                .getElementById("email")
+                .value
+                .trim();
+
+        const message =
+            document
+                .getElementById("message")
+                .value
+                .trim();
+
+        const output =
+            document.getElementById("s");
+
+
+        /* =========================
+           VALIDATION
+        ========================= */
+
+        if (!name && !email && !message) {
+
+            output.innerHTML =
+                "Please enter your name, email and message.";
+
+            output.style.color = "red";
+
+            return;
+        }
+
+
+        if (!name) {
+
+            output.innerHTML =
+                "Please enter your name.";
+
+            output.style.color = "red";
+
+            return;
+        }
+
+
+        if (!email) {
+
+            output.innerHTML =
+                "Please enter your email.";
+
+            output.style.color = "red";
+
+            return;
+        }
+
+
+        if (!message) {
+
+            output.innerHTML =
+                "Please enter your message.";
+
+            output.style.color = "red";
+
+            return;
+        }
+
+
+        /* =========================
+           EMAIL VALIDATION
+        ========================= */
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+
+            output.innerHTML =
+                "Please enter a valid email.";
+
+            output.style.color = "red";
+
+            return;
+        }
+
+
+        /* =========================
+           SUCCESS
+        ========================= */
+
+        output.innerHTML =
+            "Message sent successfully ✔";
+
+        output.style.color =
+            "#00c853";
+
+        form.reset();
+
+    });
+
+}
